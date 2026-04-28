@@ -2,3 +2,4 @@ pandas
 altair
 streamlit_extras
 geopandas
+streamlit_js_eval
