@@ -56,7 +56,7 @@ def create_scatterplot_dataset(data):
 
 
 def create_shooter_dataset(team_data,criteria):
-shots_made_by_player = team_data[team_data['made_shot']].groupby(['shooting_team','shooting_player']).size().reset_index().rename(columns={0:'shots_made'})
+    shots_made_by_player = team_data[team_data['made_shot']].groupby(['shooting_team','shooting_player']).size().reset_index().rename(columns={0:'shots_made'})
     # shots_made_by_player['shots_missed'] = None
 
     shots_missed_by_player = team_data[~team_data['made_shot']].groupby(['shooting_team','shooting_player']).size().reset_index().rename(columns={0:'shots_missed'})
