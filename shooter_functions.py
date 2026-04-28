@@ -73,6 +73,7 @@ def create_shooter_dataset(team_data,criteria):
     top_players['Name'] = top_players['shooting_player'].apply(reduce_player_name)
     multiteam_players = {}
     for player in top_players['Name']:
+        st.write(data)
         if len(top_players[top_players['Name']==player]['shooting_team'].unique())>1:
             # Then that player has been a top shooter for more than one team. Her data should not be shown together
             player_teams = top_players[top_players['Name']==player]['shooting_team'].unique()
